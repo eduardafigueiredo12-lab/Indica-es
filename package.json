@@ -1,0 +1,11 @@
+﻿{
+  "name": "formulario-indicacao-campo-unifatecie",
+  "version": "1.0.0",
+  "description": "Formulário online para indicações de campos de estágio UniFatecie",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "test": "node --check server.js && node --check public/script.js"
+  },
+  "dependencies": {}
+}

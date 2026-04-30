@@ -1,0 +1,159 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Indicação de Campo de Estágio - UniFatecie</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div class="topbar-inner">
+      <a class="brand-lockup" href="/" aria-label="Formulário de indicações UniFatecie">
+        <img src="logo.png" alt="UniFatecie" class="topbar-logo" onerror="this.style.display='none'" />
+        <span>
+          <strong>Centro Universitário UniFatecie</strong>
+          <small>Indicação de campo de estágio</small>
+        </span>
+      </a>
+      <div class="portal-area">
+        <p>As informações serão encaminhadas ao Setor de Convênios para prospecção e acompanhamento interno.</p>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-inner">
+        <span class="eyebrow">Formulário online</span>
+        <h1 id="heroTitle">Indique uma empresa para convênio</h1>
+        <p>Preencha os dados do local onde você gostaria de realizar estágio.</p>
+      </div>
+    </section>
+
+    <div class="page-shell">
+      <section class="notice-panel" aria-labelledby="orientacaoTitle">
+        <div>
+          <span class="notice-label">Antes de preencher</span>
+          <h2 id="orientacaoTitle">Verifique se a empresa já é parceira.</h2>
+          <p>Consulte a lista de empresas conveniadas antes de enviar uma nova indicação.</p>
+        </div>
+        <a class="button-link secondary-link" href="https://estagios.unifatecie.edu.br/empresas-conveniadas/" target="_blank" rel="noopener">Consultar empresas parceiras</a>
+      </section>
+
+      <form id="indicacaoForm" class="form-card">
+        <section class="form-section" aria-labelledby="alunoTitle">
+          <div class="section-heading">
+            <span class="section-number">01</span>
+            <div>
+              <p class="section-kicker">Dados do aluno</p>
+              <h2 id="alunoTitle">Identificação</h2>
+              <p>Use seu nome completo e selecione o curso relacionado à indicação.</p>
+            </div>
+          </div>
+
+          <div class="grid two">
+            <label class="field">
+              <span class="field-label">Nome do aluno <strong aria-hidden="true">*</strong></span>
+              <input id="aluno" name="aluno" required autocomplete="name" />
+            </label>
+            <label class="field">
+              <span class="field-label">Curso <strong aria-hidden="true">*</strong></span>
+              <select id="curso" name="curso" required>
+                <option value="">Selecione...</option>
+                <option>Biomedicina</option>
+                <option>Farmácia</option>
+                <option>Fonoaudiologia</option>
+                <option>Fisioterapia</option>
+                <option>Nutrição</option>
+                <option>Terapia Ocupacional</option>
+                <option>Radiologia</option>
+                <option>Técnicas Oftálmicas</option>
+                <option>Pós em Procedimentos Injetáveis</option>
+                <option>Engenharias</option>
+                <option>Licenciaturas</option>
+                <option>Técnico em Enfermagem</option>
+                <option>Técnico em Transações Imobiliárias</option>
+                <option>Outro</option>
+              </select>
+            </label>
+            <label class="field field-wide hidden" id="outroCursoBox">
+              <span class="field-label">Informe o curso <strong aria-hidden="true">*</strong></span>
+              <input id="outro_curso" name="outro_curso" />
+            </label>
+          </div>
+        </section>
+
+        <section class="form-section" aria-labelledby="localTitle">
+          <div class="section-heading">
+            <span class="section-number">02</span>
+            <div>
+              <p class="section-kicker">Empresa ou instituição</p>
+              <h2 id="localTitle">Dados do local indicado</h2>
+              <p>Informe o nome do local, localização e canais de contato disponíveis.</p>
+            </div>
+          </div>
+
+          <div class="grid two">
+            <label class="field field-wide">
+              <span class="field-label">Local indicado <strong aria-hidden="true">*</strong></span>
+              <input id="local_indicado" name="local_indicado" required autocomplete="organization" />
+            </label>
+            <label class="field">
+              <span class="field-label">Cidade <strong aria-hidden="true">*</strong></span>
+              <input id="cidade" name="cidade" required autocomplete="address-level2" />
+            </label>
+            <label class="field">
+              <span class="field-label">Estado <strong aria-hidden="true">*</strong></span>
+              <select id="estado" name="estado" required autocomplete="address-level1">
+                <option value="">UF</option>
+                <option>AC</option><option>AL</option><option>AP</option><option>AM</option><option>BA</option><option>CE</option><option>DF</option><option>ES</option><option>GO</option><option>MA</option><option>MT</option><option>MS</option><option>MG</option><option>PA</option><option>PB</option><option>PR</option><option>PE</option><option>PI</option><option>RJ</option><option>RN</option><option>RS</option><option>RO</option><option>RR</option><option>SC</option><option>SP</option><option>SE</option><option>TO</option>
+              </select>
+            </label>
+            <label class="field">
+              <span class="field-label">E-mail do local <strong aria-hidden="true">*</strong></span>
+              <input id="email" name="email" type="email" required autocomplete="email" />
+            </label>
+            <label class="field">
+              <span class="field-label">Telefone/WhatsApp <strong aria-hidden="true">*</strong></span>
+              <input id="telefone_whatsapp" name="telefone_whatsapp" required inputmode="tel" autocomplete="tel" />
+              <small>Informe um número direto, preferencialmente WhatsApp.</small>
+            </label>
+            <label class="field">
+              <span class="field-label">Responsável do local <em>opcional</em></span>
+              <input id="responsavel_local" name="responsavel_local" autocomplete="name" />
+            </label>
+            <label class="field field-wide">
+              <span class="field-label">Observações <em>opcional</em></span>
+              <textarea id="observacoes" name="observacoes" rows="5" placeholder="Ex.: setor, melhor horário para contato, pessoa de referência ou outras informações úteis."></textarea>
+            </label>
+          </div>
+        </section>
+
+        <section class="action-panel" aria-labelledby="envioTitle">
+          <div>
+            <p class="section-kicker">Envio da indicação</p>
+            <h2 id="envioTitle">Enviar para análise</h2>
+            <p>Após o envio, a indicação será registrada para acompanhamento interno do setor.</p>
+          </div>
+          <button type="submit" class="primary">Enviar indicação</button>
+        </section>
+
+        <div id="indicacaoMsg" class="form-feedback" role="status" aria-live="polite"></div>
+      </form>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner">
+      <span>Centro Universitário UniFatecie</span>
+      <span>Setor de Convênios</span>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
